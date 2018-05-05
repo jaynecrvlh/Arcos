@@ -1,0 +1,10 @@
+.sair{
+    float: right;
+    color: rgb(170, 170, 170);
+}
+
+.user-name{
+    color: rgb(109, 189, 226);
+    font-family: 'Yantramanav';
+    margin: 0;
+}
