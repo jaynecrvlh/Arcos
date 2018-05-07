@@ -1,7 +1,10 @@
-<div class="card bg" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Dark card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
+<div class="col-sm">
+      <div class="card bg text-white mb-3" style="width: 18rem;">
+          <div class="card-body">
+            <h5><b> {{ cartoes[index].titulo }} </b></h5>
+            <p> {{ cartoes[index].data }} </p>
+            <div class="line"></div>
+            <p class="card-text"> {{ cartoes[index].texto }} </p>
+          </div>
+        </div>
 </div>

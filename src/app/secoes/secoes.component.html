@@ -1,1 +1,8 @@
-<app-cartao></app-cartao>
+<div class="contain">
+    <div class="row">
+        <app-cartao [cartoes]="cartoes" 
+                    [index]="index" 
+                    *ngFor="let index = index; let cartao of cartoes">
+        </app-cartao>
+    </div>
+</div>

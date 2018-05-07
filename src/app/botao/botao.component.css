@@ -1,0 +1,23 @@
+.text{
+    font-size: 17pt;
+    text-decoration: none;
+    color: white;
+}
+
+/* .line{
+    height: 2px;
+    width: 90px;
+    background-color: rgb(155, 215, 243);
+    margin-top: 8px;
+    margin-bottom: 8px;
+} */
+
+.ativo{
+    padding-bottom: 5px;
+    border-bottom: 2px solid #47C7DD;
+}
+
+.card{
+    height: 100px;
+    overflow: auto;
+}

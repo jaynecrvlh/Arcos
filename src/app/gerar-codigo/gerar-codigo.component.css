@@ -1,0 +1,65 @@
+.bg{
+    background: linear-gradient(rgb(109, 189, 226), rgb(68, 106, 173));
+    height: 70vh;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 82px 0 82px;
+}
+
+.instrucoes{
+    width: 30vw;
+    height: 60vh;
+    margin: 25px;
+    float: left;
+    position: relative;
+}
+
+.text{
+    font-size: 11pt;
+}
+
+.marginl{
+    margin-bottom: 29px;
+}
+
+.margins{
+    margin-bottom: 15px;
+}
+
+.codigo-gerado{
+    width: 30vw;
+    height: 60vh;
+    margin: 25px;
+    float: right;
+    position: relative;
+}
+
+.codigo-container{
+    width: 20vw;
+    height: 12vh;
+    background-color: white;
+    border: 2px solid #47C7DD;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 20vh;
+}
+
+.codigo{
+    font-size: 20pt;
+    text-align: center;
+    color: black;
+    margin: 3vh;
+}
+
+.gerar{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.voltar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+

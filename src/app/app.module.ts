@@ -9,6 +9,8 @@ import { CartaoComponent } from './cartao/cartao.component';
 import { CriarSecaoComponent } from './criar-secao/criar-secao.component';
 import { SecoesComponent } from './secoes/secoes.component';
 import { routing } from './app.routing';
+import { BotaoComponent } from './botao/botao.component';
+import { GerarCodigoComponent } from './gerar-codigo/gerar-codigo.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { routing } from './app.routing';
     NavbarComponent,
     CartaoComponent,
     CriarSecaoComponent,
-    SecoesComponent
+    SecoesComponent,
+    BotaoComponent,
+    GerarCodigoComponent
   ],
   imports: [
     BrowserModule,
