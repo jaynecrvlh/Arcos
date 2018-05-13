@@ -1,0 +1,85 @@
+.add-pergunta{
+    padding: 30px 0 0 40px;
+   /* background-color: red; */
+   height: 100%;
+}
+
+.alternativa{
+    display: flex;
+    justify-content: center;
+    height: 5px;
+    margin-top: 30px;
+}
+
+.num-alternativa{
+    border: 1px solid #436CAA;
+    /* width: 70px; */
+    margin-right: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-control{
+    border: none;
+    background-color: transparent;
+    border-radius: 0px;
+    padding-left: 0px;
+    /* height: 1px; */
+    color: white;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+ }
+
+.input{
+    border-bottom: 2px solid #47C7DD;
+}
+.form{
+    width: 30vw;
+    margin: 25px 0 0 30px;
+    /* float: left; */
+}
+
+.instrucoes{
+    width: 30vw;
+    margin: 25px 90px 0 0 ;
+    float: right;
+    position: relative;
+}
+
+.respostas{
+    width: 25vw;
+    margin-top: 20px;
+   
+}
+
+.subtitle{
+    font-size: 9pt;
+    color: rgb(224, 224, 21);
+}
+.col{
+    height: auto;
+}
+
+/* .alternativa{
+    display: flex;
+} */
+
+/* .margintitle{
+    margin-bottom: 29px;
+} */
+
+/* .text{
+    font-size: 11pt;
+} */
+
+
+.botoes{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 30px;
+    height: 60px;
+    width: 1070px;
+}

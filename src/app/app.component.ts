@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+// import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  
+  
+  // mostrarPageInicial: boolean = true;
+
+  // constructor (private servico: AppService){
+
+  // }
+
+  OnInit(){
+    // this.servico.mostrarPageApresentacao.subscribe(
+    //   mostrar => this.mostrarPageInicial = mostrar
+    // );
+  }
 }

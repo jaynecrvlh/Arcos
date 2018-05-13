@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.page-inicial{
+    background: linear-gradient(40deg, rgb(68, 106, 173), rgb(109, 189, 226));
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo{
+    padding: 40px 0 30px 70px;
+    width: 160px;
+}
+
+.conteudo{
+    margin-left: 70px;
+    /* background-color: red; */
+    width: 530px;
+    height: 450px;
+    color: white;
+    line-height: 1.3;
+}
+
+.titulo{
+    padding-bottom: 10px;
+}
+
+.video{
+   margin-top: 10px;
+}

@@ -1,0 +1,29 @@
+.page-form{
+    background-color: #F3F3F3;
+    width: 400px;
+    height: 570px;
+    display: inline-block;
+    float: right;
+    margin: 40px 65px 0 0;
+    
+}
+
+.itens{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.item{
+    font-size: 15pt;
+    padding: 0px 40px 0 40px;
+    
+}
+
+.ativo{
+    padding-bottom: 5px;
+    border-bottom: 2px solid #47C7DD;
+}
+a {
+    text-decoration: none;
+}

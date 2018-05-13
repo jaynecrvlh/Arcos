@@ -1,0 +1,9 @@
+<div class=page-form>
+
+  <div class="itens">
+      <a class="item" routerLink="entrar" (click)= "ativarEntrar()" ><b [ngClass]="{ativo: entrarAtivo}"  >Entrar</b></a>
+      <a class="item " routerLink="cadastrar" (click)= "ativarCadastrar()"><b  [ngClass]="{ativo: cadastrarAtivo}"> Cadastrar</b> </a>
+  </div>
+
+ <router-outlet></router-outlet>
+</div>

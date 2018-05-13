@@ -1,0 +1,26 @@
+.form-entrar{
+    padding: 80px 30px 50px 30px;
+}
+
+.form-control{
+    border: none;
+    background-color: #F3F3F3;
+    border-radius: 0px;
+    padding-left: 0px;
+}
+.input{
+    border-bottom: 2px solid #47C7DD;
+}
+.form-group{
+    padding-bottom: 30px;
+}
+
+
+.div-esqueceu-senha{
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+}
+.esqueceu-senha{
+    font-size: 10pt;
+}

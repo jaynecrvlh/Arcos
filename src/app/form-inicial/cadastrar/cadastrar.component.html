@@ -1,0 +1,34 @@
+<div>
+    <div >
+        <form class="form-cadastrar" #cadastro="ngForm">
+            <div class="form-group">
+              <label for="exampleInputNome"><b>Nome</b></label>
+              <input type="text" class="form-control input" id="exampleInputNome" aria-describedby="emailHelp" placeholder="Exemplo nome"  [(ngModel)]="nome" name="nome" required #userNome="ngModel">
+              <div *ngIf="!userNome.valid && userNome.touched" class="campo-vazio"> O nome é obrigatório! </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail"><b>Email:</b></label>
+              <input type="email" class="form-control input" id="exampleInputEmail" placeholder="exemplo@email.com" [(ngModel)]="email" name="email" required email #userEmail="ngModel">
+              <div *ngIf="!userEmail.valid && userEmail.touched" class="campo-vazio"> O Email é obrigatório! </div>
+            </div>
+            <div class="">
+              <div class="senha-e-conf senha">
+                <label for="exampleInputPassword1"><b>Senha:</b></label>
+                <input type="password" class="form-control input" id="exampleInputPassword1" placeholder="**********"  [(ngModel)]="senha" name="senha" required #userSenha="ngModel" validateEqual="confirmSenha" reverse="true">
+                <div *ngIf="!userSenha.valid && userSenha.touched" class="campo-vazio"> A senha é obrigatória! </div>
+              </div>
+              <div class="senha-e-conf">
+                <label for="exampleInputPassword2"><b>Confirmar senha:</b></label>
+                <input type="password" class="form-control input" id="exampleInputPassword2" placeholder="**********" [(ngModel)]="cnfsenha" name="cnfsenha" required #confirmSenha="ngModel" validateEqual="userSenha">
+                <div [ngClass]="{'naocomp': compatibilidade}" class="campo-vazio comp"> Senhas não compatativeis! </div>
+              </div>
+            </div>
+          </form>      
+    </div>
+    <app-botao-inicial (click)="addUser($event) ">Cadastrar</app-botao-inicial>
+    <div class="div-termo">
+        <p class="termo">Ao clicar em cadastrar você está concordando com <br> 
+          os <a href="">termos de uso</a> e com a <a href="">política de privacidade </a></p>
+    </div>
+</div>
+

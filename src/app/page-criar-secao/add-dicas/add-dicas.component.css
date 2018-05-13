@@ -1,0 +1,57 @@
+.add-dicas{
+    color: white;
+    padding: 50px 0 0 40px;
+    /* background-color: red; */
+    height: 100%;
+}
+
+.dica{
+    display: flex;
+    justify-content: center;
+}
+
+.num-dica{
+    border: 1px solid #436CAA;
+    width: 70px;
+    height: 50px;
+    margin-right: 3px;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #436CAA;
+}
+.form-control{
+    border: none;
+    background-color: transparent;
+    border-radius: 0px;
+    padding-left: 0px;
+    color: white;
+}
+.input{
+    border-bottom: 2px solid #47C7DD;
+}
+.row-dica{
+    margin-top: 20px;
+}
+.dica1{
+    margin-top: 40px;
+}
+.botoes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    height: 60px;
+    width: 1070px;
+    /* background: red; */
+}
+.img{
+    width: 300px;
+    margin-left: 25px;
+}
+.tabueiro-dica{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

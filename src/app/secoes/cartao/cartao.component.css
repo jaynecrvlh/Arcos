@@ -1,0 +1,29 @@
+.bg{
+    background: linear-gradient(rgb(109, 189, 226), rgb(68, 106, 173));
+}
+
+.card{
+    border: none;
+    border-radius: 15px;
+    width: 300px;
+}
+
+p{
+    margin: 0;
+}
+
+h5{
+    margin-bottom: 2px;
+}
+
+.line{
+    height: 2px;
+    width: 16rem;
+    background-color: rgb(155, 215, 243);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.card-text{
+    font-size: 11pt
+}

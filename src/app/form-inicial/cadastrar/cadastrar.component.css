@@ -1,0 +1,49 @@
+.form-cadastrar{
+    padding: 50px 30px 40px 30px;
+}
+
+.form-control{
+    border: none;
+    background-color: #F3F3F3;
+    border-radius: 0px;
+    padding-left: 0px;
+}
+.input{
+    border-bottom: 2px solid #47C7DD;
+}
+.form-group{
+    padding-bottom: 15px;
+}
+
+
+.div-termo{
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+}
+.termo{
+    font-size: 8pt;
+    text-align: center;
+}
+
+.senha{
+    margin-right: 12px;   
+}
+.senha-e-conf{
+    width: 160px;
+    display: inline-block;
+}
+
+.ng-invalid.ng-touched:not(form){
+    border: 1px solid red;
+}
+
+.comp{
+    display: none;
+}
+.naocomp{
+    display: block;
+}
+.campo-vazio{
+    color: red;
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Cartao } from '../cartao.model';
+import { Cartao } from '.././modelos/cartao.model';
 
 @Component({
   selector: 'app-secoes',
