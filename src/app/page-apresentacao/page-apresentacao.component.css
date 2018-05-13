@@ -4,7 +4,7 @@
 }
 
 .page-inicial{
-    background: linear-gradient(40deg, rgb(68, 106, 173), rgb(109, 189, 226));
+    background: linear-gradient(40deg, #446CAA,#00A2C3);
     width: 100vw;
     height: 100vh;
 }

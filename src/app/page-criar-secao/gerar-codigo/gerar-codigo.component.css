@@ -1,39 +1,47 @@
-.bg{
+/* .bg{
     background: linear-gradient(rgb(109, 189, 226), rgb(68, 106, 173));
     height: 70vh;
     border-radius: 20px;
     padding: 20px;
     margin: 0 82px 0 82px;
-}
+} */
 
-.instrucoes{
+/* .instrucoes{
     width: 30vw;
     height: 60vh;
-    margin: 25px;
+    margin: 40px 40px 40px 60px;
     float: left;
     position: relative;
-}
+} */
 
-.text{
+/* .text{
     font-size: 11pt;
-}
+} */
 
-.marginl{
+/* .marginl{
     margin-bottom: 29px;
-}
+} */
 
-.margins{
+/* .margins{
     margin-bottom: 15px;
-}
+} */
 
-.codigo-gerado{
+/* .codigo-gerado{
     width: 30vw;
     height: 60vh;
     margin: 25px;
     float: right;
     position: relative;
+} */
+.coluna1{
+    /* background-color: red; */
+    padding: 40px 0 0 60px;
 }
-
+.coluna2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .codigo-container{
     width: 20vw;
     height: 12vh;
@@ -41,17 +49,19 @@
     border: 2px solid #47C7DD;
     border-radius: 15px;
     margin: auto;
-    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .codigo{
     font-size: 20pt;
-    text-align: center;
+    /* text-align: center; */
     color: black;
     margin: 3vh;
 }
 
-.gerar{
+/* .gerar{
     position: absolute;
     right: 0;
     bottom: 0;
@@ -61,5 +71,16 @@
     position: absolute;
     left: 0;
     bottom: 0;
+} */
+
+.botoes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+    margin-top: 30px;
+    margin-left: 40px;
+    height: 60px;
+    width: 1070px;
 }
 
