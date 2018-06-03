@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddDicasComponent implements OnInit {
 
+  
+  texto: string;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+    clicou(texto: string){
+    this.texto = texto;
+    console.log(texto);
   }
 
 }

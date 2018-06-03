@@ -7,13 +7,13 @@
       <div class="row row-dica dica1">
         <div class="col-sm dica">
             <div class="num-dica">
-              <h2>01</h2>
+              <h4>01</h4>
             </div>
             <input type="text" class="form-control input">
         </div>
         <div class="col-sm dica">
            <div class="num-dica">
-             <h2>08</h2>
+             <h4>08</h4>
            </div>
            <input type="text" class="form-control input">
         </div>
@@ -21,27 +21,13 @@
       <div class="row row-dica">
         <div class="col-sm dica">
             <div class="num-dica">
-              <h2>03</h2>
+              <h4>02</h4>
             </div>
             <input type="text" class="form-control input">
         </div>
         <div class="col-sm dica">
             <div class="num-dica">
-              <h2>11</h2>
-            </div>
-            <input type="text" class="form-control input">
-        </div>
-      </div>
-      <div class="row row-dica">
-        <div class="col-sm dica">
-            <div class="num-dica">
-              <h2>05</h2>
-            </div>
-            <input type="text" class="form-control input">
-        </div>
-        <div class="col-sm dica">
-            <div class="num-dica">
-              <h2>13</h2>
+              <h4>10</h4>
             </div>
             <input type="text" class="form-control input">
         </div>
@@ -49,48 +35,92 @@
       <div class="row row-dica">
         <div class="col-sm dica">
             <div class="num-dica">
-              <h2>07</h2>
+              <h4>04</h4>
             </div>
             <input type="text" class="form-control input">
         </div>
         <div class="col-sm dica">
             <div class="num-dica">
-              <h2>15</h2>
+              <h4>11</h4>
+            </div>
+            <input type="text" class="form-control input">
+        </div>
+      </div>
+      <div class="row row-dica">
+        <div class="col-sm dica">
+            <div class="num-dica">
+              <h4>05</h4>
+            </div>
+            <input type="text" class="form-control input">
+        </div>
+        <div class="col-sm dica">
+            <div class="num-dica">
+              <h4>13</h4>
+            </div>
+            <input type="text" class="form-control input">
+        </div>
+      </div>
+      <div class="row row-dica">
+        <div class="col-sm dica">
+            <div class="num-dica">
+              <h4>07</h4>
+            </div>
+            <input type="text" class="form-control input">
+        </div>
+        <div class="col-sm dica">
+            <div class="num-dica">
+              <h4>14</h4>
             </div>
             <input type="text" class="form-control input">
         </div>
       </div>
     </div>
-    <div class="col-sm-5 tabueiro-dica">
-      <div class="coluna-lateral">
-
-      </div>
-      <div class="coluna-central">
-        <div class="coluna-central__superior-inferior">
-
+    <div class="col-sm-5">
+      <p class="instrucao">Adicione as dicas que serão mostradas no decorrer do jogo. As dicas deverão indicar ao aluno qual assunto está sendo abordado nesta seção.
+        </p>
+      <div class="tabueiro-dica">
+        <div class="tabu">
+            <div class="coluna-lateral" >
+                <div class="casa cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')"><img src="../../../assets/images/lock.png"></div>
+                <div class="casa">13</div>
+                <div class="casa casa-lateral">14</div>
+                <div class="casa casa-lateral cadeado"(click)="clicou('Esta casa é fixa e não pode receber uma dica')"><img src="../../../assets/images/lock.png"></div>
+                <div class="casa casa-lateral inicio"></div>
+              </div>
+              <div class="coluna-central">
+                <div class="coluna-central__superior-inferior" id="superior">
+                  <div class="casa">11</div>
+                  <div class="casa">10</div>
+                  <div class="casa cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')"><img src="../../../assets/images/lock.png"></div>
+                </div>
+                <div class="coluna-central__central">
+                  <p class="texto-dinamico"><b>{{texto}}</b></p>
+                </div>
+                <div class="coluna-central__superior-inferior">
+                  <div class="casa" (click)="clicou('Texto 1')">01</div>
+                  <div class="casa">02</div>
+                  <div class="casa cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')"><img src="../../../assets/images/lock.png"></div>
+                </div>
+        
+              </div>
+              <div class="coluna-lateral">
+                  <div class="casa casa-lateral">08</div>
+                  <div class="casa casa-lateral">07</div>
+                  <div class="casa casa-lateral cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')"><img src="../../../assets/images/lock.png"></div>
+                  <div class="casa casa-lateral">05</div>
+                  <div class="casa">04</div>
+              </div>
         </div>
-        <div class="coluna-central__central">
-
-        </div>
-        <div class="coluna-central__superior-inferior">
-
-        </div>
-
       </div>
-      <div class="coluna-lateral">
-
-      </div>
-
-      <!-- <img class="img"src="../../../assets/images/Tela de codigo gerado.png" alt=""> -->
     </div>
   </div>
 
   <div class="botoes">
     <div class="voltar">
-      <app-botao  routerLink = "page-criar-secao/gerarcodigo"> Voltar </app-botao>
+      <app-botao  [routerLink] = "['/pagina-inicial','criarsecao','addPergunta']"> Voltar </app-botao>
     </div>
     <div >
-      <app-botao class="avancar" routerLink= "page-criar-secao/criarsecao"> Avançar </app-botao>
+      <app-botao class="avancar" [routerLink] = "['/pagina-inicial','criarsecao','gerarcodigo']"> Avançar </app-botao>
     </div>
   </div>
 </div>

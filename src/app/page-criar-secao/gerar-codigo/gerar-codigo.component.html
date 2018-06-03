@@ -1,11 +1,16 @@
 <div class=" text-white">
   <div class="row">
     <div class="col-sm-6 coluna1">
-      <h5 class="marginl"><b> Criando nova seção </b></h5>
-      <h6 class="margins"><b> 3° Confirme as dias que cadastrou e gere o código </b></h6>
-      <p class="text marginl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>  
-      <h6 class="margins"><b> 4° Pegue o código e distribua para os alunos </b></h6>
-      <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>  
+      <h5 class="margins"><b> 3° Confirme as dias que cadastrou e gere o código </b></h5>
+      <p class="text marginl">Confira as dicas cadastradas, verifique se elas estão corretas ou se 
+        há algo que precise de correção. Se as dicas estiverem certas, sem necessidade de mais correções, 
+        gere o código apertando no botão “Gerar”, no canto direito da tela. A partir do código gerado, que 
+        será exibido na caixa em branco ao lado, será possível acessar no jogo a seção que você acabou de criar.        
+      </p>  
+      <h5 class="margins"><b> 4° Pegue o código e distribua para os alunos </b></h5>
+      <p class="text">Guarde este código para utilizar a seção criada. Ao abrir o aplicativo do Arcos, 
+        o jogo pedirá um código, digite o código gerado para jogar com esta seção!
+      </p>  
 
     </div>
     <div class="col-sm-6 coluna2">
@@ -17,7 +22,7 @@
   </div>
   <div class="botoes">
     <div class="voltar">
-        <app-botao> Voltar </app-botao>
+        <app-botao [routerLink] = "['/pagina-inicial','criarsecao','addDicas']"> Voltar </app-botao>
     </div>
     <div class="gerar">
         <app-botao> Gerar </app-botao>
