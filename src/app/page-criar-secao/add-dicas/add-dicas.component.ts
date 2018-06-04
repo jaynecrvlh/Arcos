@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AddDicasComponent implements OnInit {
 
   
-  texto: string;
+  texto: string = "Utilize o conteúdo da aula como base nas dicas que cadastrar";
 
   constructor() { }
 

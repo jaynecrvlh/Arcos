@@ -7,7 +7,7 @@
 .alternativa{
     display: flex;
     justify-content: center;
-    height: 5px;
+    height: 7px;
     margin-top: 30px;
 }
 
@@ -26,6 +26,7 @@
     padding-left: 0px;
     /* height: 1px; */
     color: white;
+    height: 25px;
 }
 
 ::-webkit-input-placeholder {
@@ -81,11 +82,10 @@ img{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-top: 70px;
     height: 60px;
-    width: 160px;
-    margin-left: 90px;
-    /* margin-right: 30px; */
+    width: 1070px;
+    margin-top: 5px;
+    margin-left: 15px;
     float: right;
     /* background-color: red; */
 }

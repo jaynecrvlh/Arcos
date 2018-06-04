@@ -82,33 +82,33 @@
         <div class="tabu">
             <div class="coluna-lateral" >
                 <div class="casa cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')"><img src="../../../assets/images/lock.png"></div>
-                <div class="casa">13</div>
-                <div class="casa casa-lateral">14</div>
+                <div class="casa" (click)="clicou('Seja direto(a)')">13</div>
+                <div class="casa casa-lateral" (click)="clicou('Cuidado para não entregar o jogo')">14</div>
                 <div class="casa casa-lateral cadeado"(click)="clicou('Esta casa é fixa e não pode receber uma dica')"><img src="../../../assets/images/lock.png"></div>
                 <div class="casa casa-lateral inicio"></div>
               </div>
               <div class="coluna-central">
                 <div class="coluna-central__superior-inferior" id="superior">
-                  <div class="casa">11</div>
-                  <div class="casa">10</div>
+                  <div class="casa" (click)="clicou('Utilize as casas finais para as dicas mais fáceis')">11</div>
+                  <div class="casa" (click)="clicou('Dê dicas que incentivem a discussão')">10</div>
                   <div class="casa cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')"><img src="../../../assets/images/lock.png"></div>
                 </div>
                 <div class="coluna-central__central">
                   <p class="texto-dinamico"><b>{{texto}}</b></p>
                 </div>
                 <div class="coluna-central__superior-inferior">
-                  <div class="casa" (click)="clicou('Texto 1')">01</div>
-                  <div class="casa">02</div>
+                  <div class="casa" (click)="clicou('Ordene das dicas mais difíceis até as mais fáceis')">01</div>
+                  <div class="casa" (click)="clicou('Utilize as primeiras casas para as dicas mais difíceis')">02</div>
                   <div class="casa cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')"><img src="../../../assets/images/lock.png"></div>
                 </div>
         
               </div>
               <div class="coluna-lateral">
-                  <div class="casa casa-lateral">08</div>
-                  <div class="casa casa-lateral">07</div>
+                  <div class="casa casa-lateral" (click)="clicou('Dê dicas curtas')">08</div>
+                  <div class="casa casa-lateral" (click)="clicou('Cuidado para não tornar o jogo difícil demais')" >07</div>
                   <div class="casa casa-lateral cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')"><img src="../../../assets/images/lock.png"></div>
-                  <div class="casa casa-lateral">05</div>
-                  <div class="casa">04</div>
+                  <div class="casa casa-lateral" (click)="clicou('Não utilize fatos que seus alunos não tenham sido apresentados')">05</div>
+                  <div class="casa"(click)="clicou('Confunda seus alunos, faça-os ter que juntar as peças')">04</div>
               </div>
         </div>
       </div>
