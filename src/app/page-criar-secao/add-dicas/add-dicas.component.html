@@ -9,13 +9,13 @@
             <div class="num-dica">
               <h4>01</h4>
             </div>
-            <input type="text" class="form-control input">
+            <input type="text" class="form-control input" [(ngModel)]="casa1" name="casa1" required #scasa1="ngModel">
         </div>
         <div class="col-sm dica">
            <div class="num-dica">
              <h4>08</h4>
            </div>
-           <input type="text" class="form-control input">
+           <input type="text" class="form-control input" [(ngModel)]="casa8" name="casa8" required #scasa8="ngModel">
         </div>
       </div>
       <div class="row row-dica">
@@ -23,13 +23,13 @@
             <div class="num-dica">
               <h4>02</h4>
             </div>
-            <input type="text" class="form-control input">
+            <input type="text" class="form-control input" [(ngModel)]="casa2" name="casa2" required #scasa2="ngModel">
         </div>
         <div class="col-sm dica">
             <div class="num-dica">
               <h4>10</h4>
             </div>
-            <input type="text" class="form-control input">
+            <input type="text" class="form-control input" [(ngModel)]="casa10" name="casa10" required #scasa10="ngModel">
         </div>
       </div>
       <div class="row row-dica">
@@ -37,13 +37,13 @@
             <div class="num-dica">
               <h4>04</h4>
             </div>
-            <input type="text" class="form-control input">
+            <input type="text" class="form-control input" [(ngModel)]="casa4" name="casa4" required #scasa4="ngModel">
         </div>
         <div class="col-sm dica">
             <div class="num-dica">
               <h4>11</h4>
             </div>
-            <input type="text" class="form-control input">
+            <input type="text" class="form-control input" [(ngModel)]="casa11" name="casa11" required #scasa11="ngModel">
         </div>
       </div>
       <div class="row row-dica">
@@ -51,13 +51,13 @@
             <div class="num-dica">
               <h4>05</h4>
             </div>
-            <input type="text" class="form-control input">
+            <input type="text" class="form-control input" [(ngModel)]="casa5" name="casa5" required #scasa5="ngModel">
         </div>
         <div class="col-sm dica">
             <div class="num-dica">
               <h4>13</h4>
             </div>
-            <input type="text" class="form-control input">
+            <input type="text" class="form-control input" [(ngModel)]="casa13" name="casa13" required #scasa13="ngModel">
         </div>
       </div>
       <div class="row row-dica">
@@ -65,13 +65,13 @@
             <div class="num-dica">
               <h4>07</h4>
             </div>
-            <input type="text" class="form-control input">
+            <input type="text" class="form-control input" [(ngModel)]="casa7" name="casa7" required #scasa7="ngModel">
         </div>
         <div class="col-sm dica">
             <div class="num-dica">
               <h4>14</h4>
             </div>
-            <input type="text" class="form-control input">
+            <input type="text" class="form-control input" [(ngModel)]="casa14" name="casa14" required #scasa14="ngModel">
         </div>
       </div>
     </div>
@@ -120,7 +120,7 @@
       <app-botao  [routerLink] = "['/pagina-inicial','criarsecao','addPergunta']"> Voltar </app-botao>
     </div>
     <div >
-      <app-botao class="avancar" [routerLink] = "['/pagina-inicial','criarsecao','gerarcodigo']"> Avançar </app-botao>
+      <app-botao class="avancar" (click)="criarSecao3($event)" [routerLink] = "['/pagina-inicial','criarsecao','gerarcodigo']"> Avançar </app-botao>
     </div>
   </div>
 </div>

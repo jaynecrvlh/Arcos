@@ -1,10 +1,15 @@
 export class Cartao{
     titulo: string;
     data: string;
-    texto: string;
-    constructor(titulo, data, texto){
+    descricao: string;
+    palpite: [string];
+    correta: number;
+    dicas: [string];
+    constructor(titulo, data, descricao, palpite, correta, dicas){
         this.titulo = titulo;
         this.data = data;
-        this.texto = texto;
+        this.descricao = descricao;
+        this.palpite = palpite;
+        this.dicas = dicas;
     }
 }

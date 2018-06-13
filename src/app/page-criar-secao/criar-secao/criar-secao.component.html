@@ -2,37 +2,37 @@
     <div class= "row">
         <div class="col-sm-5">
             <div class="form">
-                <form>
+                <form #secao1="ngForm">
                     <h5><b>Nome da seção:</b></h5>
-                    <input type="text" placeholder="exemplo: Rachel de Queiroz" class="input form-control"><br/>
+                    <input type="text" placeholder="exemplo: Rachel de Queiroz" class="input form-control" [(ngModel)]="titulo" name="titulo" required #stitulo="ngModel"><br/>
                     <h5><b>Descrição da seção:</b></h5>
-                    <input type="text" placeholder="exemplo: Esta seção retrada a vida e memoria da escritora Rachel de Queiroz" class="input form-control">
+                    <input type="text" placeholder="exemplo: Esta seção retrada a vida e memoria da escritora Rachel de Queiroz" class="input form-control" [(ngModel)]="descricao" name="descricao" required #sdescricao="ngModel">
                     <div class="respostas">
                         <h5><b>Respostas:</b></h5>
                         <p class="subtitle">* selecione para indicar a resposta correta</p>
                         <div class="alternativa">
                             <div class="num-alternativa">
-                                <input class="radios" type="radio" name="alternativa3" class="check">
+                                <input class="radios" type="radio" name="check1" class="check" [(ngModel)]="opcao" value="0">
                             </div>
-                            <input type="text" class="form-control input">
+                            <input type="text" class="form-control input" [(ngModel)]="alternativa1" name="alternativa1" required #salternativa1="ngModel">
                         </div>
                         <div class="alternativa">
                             <div class="num-alternativa">
-                                <input class="radios" type="radio" name="alternativa3" class="check">
+                                <input class="radios" type="radio" name="check2" class="check" [(ngModel)]="opcao" value="1">
                             </div>
-                            <input type="text" class="form-control input">
+                            <input type="text" class="form-control input" [(ngModel)]="alternativa2" name="alternativa2" required #salternativa2="ngModel">
                         </div>
                         <div class="alternativa">
                             <div class="num-alternativa">
-                                <input class="radios" type="radio" name="alternativa3" class="check">
+                                <input class="radios" type="radio" name="check3" class="check" [(ngModel)]="opcao" value="2">
                             </div>
-                            <input type="text" class="form-control input">
+                            <input type="text" class="form-control input" [(ngModel)]="alternativa3" name="alternativa3" required #salternativa3="ngModel">
                         </div>
                         <div class="alternativa">
                             <div class="num-alternativa">
-                                <input class="radios" type="radio" name="alternativa3" class="check">
+                                <input class="radios" type="radio" name="check4" class="check" [(ngModel)]="opcao" value="3">
                             </div>
-                            <input type="text" class="form-control input">
+                            <input type="text" class="form-control input" [(ngModel)]="alternativa4" name="alternativa4" required #salternativa4="ngModel">
                         </div>
                     </div>
                 </form>
@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="botoes">
-            <app-botao class="avancar" [routerLink] = "['/pagina-inicial','criarsecao','addDicas']"> Avançar </app-botao>
+            <app-botao class="avancar" (click)="criarSecao1($event)" [routerLink] = "['/pagina-inicial','criarsecao','addDicas']"> Avançar </app-botao>
         </div>  
     </div>
 </div>

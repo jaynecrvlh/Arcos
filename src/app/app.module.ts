@@ -54,7 +54,7 @@ import { CriarSecaoComponent } from './page-criar-secao/criar-secao/criar-secao.
     HttpModule,
     routing,
     ],
-  providers: [AppService],
+  providers: [AppService, AddDicasComponent, GerarCodigoComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

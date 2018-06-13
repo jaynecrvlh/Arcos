@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { AppService } from './../../app.service';
 import { User } from './../../modelos/user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-entrar',
@@ -12,10 +13,8 @@ export class EntrarComponent implements OnInit {
 
   emailLogin: string;
   senhaLogin: string;
-
-  users: User [] = null
   
-  constructor( private servico: AppService) { }
+  constructor( private servico: AppService, private router: Router) { }
 
   ngOnInit() {
     this.servico.getUsuarios();
@@ -26,9 +25,10 @@ export class EntrarComponent implements OnInit {
   entrar(e) {
     event.preventDefault();
     console.log("Entrou no TS")
-    this.servico.entrar(this.emailLogin, this.senhaLogin)
+    this.servico.login(this.emailLogin, this.senhaLogin)
     .subscribe((data) => {
-      this.users = data;
+      console.log(data);
+      this.router.navigate(['pagina-inicial/secoes'])
     },
       (error) => console.log(error));
 

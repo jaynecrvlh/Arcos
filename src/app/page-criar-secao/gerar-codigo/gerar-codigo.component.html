@@ -25,7 +25,7 @@
         <app-botao [routerLink] = "['/pagina-inicial','criarsecao','addDicas']"> Voltar </app-botao>
     </div>
     <div class="gerar">
-        <app-botao> Gerar </app-botao>
+        <app-botao (enviarInfo)="criarSecao6($event)"> Gerar </app-botao>
     </div>
   </div>
 </div>
