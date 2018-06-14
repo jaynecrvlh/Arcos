@@ -1,3 +1,4 @@
+import { AppService } from './../../app.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor( private servico: AppService) { }
 
   secaoAtivo = true;
   criarAtivo = false;
@@ -15,6 +16,8 @@ export class NavbarComponent implements OnInit {
   ativarSecao(){
     this.secaoAtivo = true;
     this.criarAtivo = false;
+    this.servico.getSecoes();
+
   }
 
   ativarCriar(){

@@ -28,7 +28,6 @@ export class EntrarComponent implements OnInit {
     this.servico.login(this.emailLogin, this.senhaLogin)
     .subscribe((data) => {
       console.log(data);
-      this.router.navigate(['pagina-inicial/secoes'])
     },
       (error) => console.log(error));
 

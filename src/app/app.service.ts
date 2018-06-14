@@ -15,9 +15,6 @@ export class AppService {
 
   constructor(private http: Http , private router: Router) { }
 
-  // users: User[] = [];
-
-  // mostrarPageApresentacao = new EventEmitter <boolean>();
 
   getToken(){
     return localStorage.getItem("token");
@@ -50,6 +47,7 @@ export class AppService {
     }).map((response:Response) => {
       let r = response.json();
       this.setToken(r.token);
+      this.router.navigate(['pagina-inicial/secoes'])
       // this.username = r.nome;
       return r;
     });
@@ -67,13 +65,24 @@ export class AppService {
 
   criarSecao(titulo, descricao, dicas, palpite, correta){
     console.log(titulo, descricao, dicas, palpite, correta)
-    return this.http.post(this.urls, {
+    return this.http.post(this.urls  + "?token=" + this.getToken(), {
       titulo, 
       descricao, 
       dicas, 
       palpite, 
       correta      
     }).map((response: Response) => (response.json()));
+  }
+
+  getSecoes(){
+    console.log("chamou o get secoes")
+    return this.http.get(this.urls + "?token=" + this.getToken())
+    .map((response:Response)=>(response.json()));
+    // .map((response:Response) => {
+    //   let data = response.json();
+    //   console.log("data service: "+data);
+    //   return data;
+    // });
   }
 
 }
