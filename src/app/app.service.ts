@@ -50,27 +50,31 @@ export class AppService {
     }).map((response:Response) => {
       let r = response.json();
       this.setToken(r.token);
-      this.username = r.nome;
+      // this.username = r.nome;
       return r;
     });
   }
 
-  getNome(){
-    return this.username;
-  }
-
-  // getUsuarios(){
-  //   return this.http.get(this.urlp + "?token=" + this.getToken())
-  //     .map((response:Response)=> {
-  //       let user = response.json();
-  //       let nome = user.nome;
-  //       return
-  //     });
+  // getNome(){
+  //   return this.username;
   // }
+
 
   getUsuarios(){
     return this.http.get(this.urlp + "?token=" + this.getToken())
       .map((response:Response)=>(response.json()));
   }
 
+  criarSecao(titulo, descricao, dicas, palpite, correta){
+    console.log(titulo, descricao, dicas, palpite, correta)
+    return this.http.post(this.urls, {
+      titulo, 
+      descricao, 
+      dicas, 
+      palpite, 
+      correta      
+    }).map((response: Response) => (response.json()));
+  }
+
 }
+

@@ -22,10 +22,10 @@
   </div>
   <div class="botoes">
     <div class="voltar">
-        <app-botao [routerLink] = "['/pagina-inicial','criarsecao','addDicas']"> Voltar </app-botao>
+        <app-botao > Voltar </app-botao>
     </div>
     <div class="gerar">
-        <app-botao (enviarInfo)="criarSecao6($event)"> Gerar </app-botao>
+        <app-botao (click)="criarSecao6()"> Gerar </app-botao>
     </div>
   </div>
 </div>

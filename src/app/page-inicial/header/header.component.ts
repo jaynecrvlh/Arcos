@@ -8,11 +8,11 @@ import { AppService } from './../../app.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  // @Input() usuario = "Jayne Carvalho";
+  
   usuario: string;
 
   constructor(private servico: AppService) {
-    this.usuario = this.servico.getNome();
+    // this.usuario = this.servico.getNome();
    }
 
   // userNome(){

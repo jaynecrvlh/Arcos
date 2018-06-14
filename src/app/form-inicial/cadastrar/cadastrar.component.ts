@@ -34,16 +34,10 @@ export class CadastrarComponent implements OnInit {
       event.preventDefault();
       console.log('ta chamando');
       this.servico.cadastrar(this.nome, this.email, this.senha)
-      // this.servico.cadastrar(new User(this.nome, this.email, this.senha))
         .subscribe((data) => {
           console.log(data);
         },
-          (error) => console.log(error))
-
-    // this.nome = "";
-    // this.email = "";
-    // this.senha = "";
-    // this.cnfsenha = "";    
+          (error) => console.log(error))  
     }
   }
 }

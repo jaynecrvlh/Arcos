@@ -1,3 +1,4 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../app.service';
 
@@ -13,31 +14,27 @@ export class GerarCodigoComponent implements OnInit {
   opcao: number;
   dicas: Array<string> = [];
 
-  constructor(private service: AppService) { }
+  constructor(private activatedRoute: ActivatedRoute, private router: Router, private servico : AppService) {
+    this.activatedRoute.queryParams.subscribe(params => {
+          this.titulo = params['titulo'];
+          this.descricao =  params['descricao']; 
+          this.palpite = params['palpite'];
+          this.opcao =  params['opcao'];
+          this.dicas = params['dicas'];
+        });
+  }
 
   ngOnInit() {
   }
 
-  // criarSecao4(titulo, descricao, palpite, opcao, dicas){
-  //   this.titulo = titulo;
-  //   this.descricao = descricao;
-  //   this.palpite = palpite;
-  //   this.opcao = opcao;
-  //   this.dicas = dicas;
-  // }
 
-  // criarSecao5(){
-  //   console.log(this.titulo);
-  //   console.log(this.descricao);
-  //   console.log(this.palpite);
-  //   console.log(this.opcao);
-  //   console.log(this.dicas);
-  // }
-
-  criarSecao6(e){
-    console.log("entrou")
-    this.titulo = e.titulo;
-    console.log(this.titulo);
+  criarSecao6(){
+    console.log("chegou na putaria do gerar");
+    this.servico.criarSecao(this.titulo, this.descricao, this.dicas, this.palpite, this.opcao)
+    .subscribe((data) => {
+      console.log(data);
+    },
+      (error) => console.log(error))  
   }
 
 }

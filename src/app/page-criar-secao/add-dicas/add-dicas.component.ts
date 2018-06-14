@@ -1,6 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Cartao } from '../../modelos/cartao.model';
 import { GerarCodigoComponent } from '../gerar-codigo/gerar-codigo.component';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-add-dicas',
@@ -19,14 +20,22 @@ export class AddDicasComponent implements OnInit {
   casa11: string;
   casa13: string;
   casa14: string;
-  ttitulo: string;
-  tdescricao: string;
-  tpalpite: Array<string> = [];
-  topcao: string;
+  titulo: string;
+  descricao: string;
+  palpite: Array<string> = [];
+  opcao: string;
   
   texto: string = "Utilize o conteúdo da aula como base nas dicas que cadastrar";
 
-  constructor(private gerarCodigo: GerarCodigoComponent) { }
+
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+    this.activatedRoute.queryParams.subscribe(params => {
+        this.titulo = params['titulo'];
+        this.descricao =  params['descricao']; 
+        this.palpite = params['palpite'];
+        this.opcao =  params['opcao'];
+        });
+  }
 
   ngOnInit() {
   }
@@ -34,16 +43,6 @@ export class AddDicasComponent implements OnInit {
     clicou(texto: string){
     this.texto = texto;
     console.log(texto);
-  }
-
-  criarSecao2(titulo, descricao, palpite, opcao){
-    console.log("chegou aqui add");
-    console.log(titulo, descricao, palpite, opcao);
-    this.ttitulo = titulo;
-    this.tdescricao = descricao;
-    this.tpalpite = palpite;
-    this.topcao = opcao;
-    console.log(this.ttitulo, this.tdescricao, this.tpalpite, this.topcao);
   }
 
   criarSecao3(e){
@@ -59,8 +58,7 @@ export class AddDicasComponent implements OnInit {
     this.dicas.push(this.casa11);
     this.dicas.push(this.casa13);
     this.dicas.push(this.casa14);
-    // this.gerarCodigo.criarSecao4(this.dicas, this.ttitulo, this.tpalpite, this.topcao, this.tdescricao);
-    console.log(this.dicas);
-    console.log(this.ttitulo);
+    this.router.navigate(['/pagina-inicial','criarsecao','gerarcodigo'], { queryParams: { titulo:this.titulo, descricao: this.descricao, palpite: this.palpite, opcao: this.opcao, dicas: this.dicas}});
+  
   }
 }
