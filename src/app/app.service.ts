@@ -16,9 +16,20 @@ export class AppService {
   constructor(private http: Http , private router: Router) { }
 
 
+  getProf(){
+    
+    return localStorage.getItem("_id")
+  }
+
+  setProf(userId){
+    localStorage.setItem("_id", userId);
+    console.log(userId);
+  }
+
   getToken(){
     return localStorage.getItem("token");
   }
+ 
 
   setToken(token){
     localStorage.setItem("token", token);
@@ -47,6 +58,7 @@ export class AppService {
     }).map((response:Response) => {
       let r = response.json();
       this.setToken(r.token);
+      this.setProf(r.userId);
       this.router.navigate(['pagina-inicial/secoes'])
       // this.username = r.nome;
       return r;
@@ -71,13 +83,18 @@ export class AppService {
       dicas, 
       palpite, 
       correta      
-    }).map((response: Response) => (response.json()));
+    }).map((response: Response) =>(response.json()));
+    
   }
 
   getSecoes(){
     console.log("chamou o get secoes")
-    return this.http.get(this.urls + "?token=" + this.getToken())
-    .map((response:Response)=>(response.json()));
+    return this.http.get(this.urlp +"/" +this.getProf()+ "/sessoes" + "?token=" + this.getToken())
+    .map((response:Response)=>
+      // (response.json())
+      console.log(response.json())
+    
+    );
     // .map((response:Response) => {
     //   let data = response.json();
     //   console.log("data service: "+data);

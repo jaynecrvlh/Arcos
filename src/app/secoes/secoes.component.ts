@@ -22,6 +22,7 @@ export class SecoesComponent implements OnInit {
   this.service.getSecoes()
           .subscribe(
             data=>{
+              console.log(data);
               this.secoes = data;
               console.log(this.secoes);
             },
