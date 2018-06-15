@@ -90,11 +90,7 @@ export class AppService {
   getSecoes(){
     console.log("chamou o get secoes")
     return this.http.get(this.urlp +"/" +this.getProf()+ "/sessoes" + "?token=" + this.getToken())
-    .map((response:Response)=>
-      // (response.json())
-      console.log(response.json())
-    
-    );
+    .map((response:Response)=>(response.json()));
     // .map((response:Response) => {
     //   let data = response.json();
     //   console.log("data service: "+data);

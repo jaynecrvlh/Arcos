@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { AppService } from './../../app.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Cartao } from '../../modelos/cartao.model';
+import { SecoesComponent } from '../../secoes/secoes.component';
 
 @Component({
   selector: 'app-cartao',
@@ -8,13 +10,17 @@ import { Cartao } from '../../modelos/cartao.model';
   styleUrls: ['./cartao.component.css']
 })
 export class CartaoComponent implements OnInit {
-  @Input() cartoes: Cartao[];
+  @Input() secoes: any = [];
 
   @Input() index;
 
-  constructor() { }
+  constructor(private service: AppService) { }
 
   ngOnInit() {
+    // this.secoes.push({titulo: "teste", descricao: "testando", data: "14/06/2018"});
+    // console.log(this.secoes);
+    console.log(this.secoes);
+    console.log(this.secoes.length);
   }
 
 }

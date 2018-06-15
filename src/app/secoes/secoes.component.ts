@@ -1,6 +1,7 @@
 import { AppService } from './../app.service';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Cartao } from '.././modelos/cartao.model';
+import { CartaoComponent } from './cartao/cartao.component';
 
 @Component({
   selector: 'app-secoes',
@@ -12,6 +13,8 @@ export class SecoesComponent implements OnInit {
   constructor(private service: AppService) { }
 
   secoes: any = [];
+  index = this.index;
+
   ngOnInit() {
   //   this.data = this.service.getSecoes()
 
@@ -29,6 +32,7 @@ export class SecoesComponent implements OnInit {
             error=>{
               console.log(error);
             }
-          )}
+          )
+        }
 
 }
