@@ -1,0 +1,53 @@
+.page-detalhe-secao{
+    background: linear-gradient(45deg,#446CAA,#00A2C3);
+    height: 502px;
+    width: 1150px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.add-pergunta{
+    padding: 20px 0 0 40px;
+   /* background-color: red; */
+}
+
+ul{
+    list-style: none;
+    
+}
+.li-num-dica{
+    height: 90px;
+    display: flex;
+    align-items:top;
+}
+.dicas div{
+    display: inline-block;
+}
+
+.num-dica{
+    border: 1px solid #436CAA;
+    width: 45px;
+    height: 45px;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #436CAA;
+}
+
+.dica{
+   font-size: 14pt;
+   padding: 0 0 0 5px;
+}
+
+.coluna-principal{
+ height: 502px;
+}
+.col-3{
+    padding: 0;
+    margin: 0;
+}
+.alternativas li{
+    list-style-type: circle;
+    font-size: 14pt;
+}

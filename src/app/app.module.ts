@@ -25,6 +25,7 @@ import { BotaoInicialComponent } from './form-inicial/botao-inicial/botao-inicia
 
 import { PageCriarSecaoComponent } from './page-criar-secao/page-criar-secao.component';
 import { CriarSecaoComponent } from './page-criar-secao/criar-secao/criar-secao.component';
+import { DetalhesSecoesComponent } from './secoes/detalhes-secoes/detalhes-secoes.component';
 
 
 
@@ -45,7 +46,8 @@ import { CriarSecaoComponent } from './page-criar-secao/criar-secao/criar-secao.
     EntrarComponent,
     CadastrarComponent,
     AddDicasComponent,
-    PageCriarSecaoComponent
+    PageCriarSecaoComponent,
+    DetalhesSecoesComponent
 
   ],
   imports: [

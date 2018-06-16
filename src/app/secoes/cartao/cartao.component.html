@@ -1,7 +1,7 @@
 <div class="">
-    <div class="card bg text-white">
+    <div class="card bg text-white" (click)="detalhe(secoes)">
         <div class="card-body">
-          <h5><b> {{ secoes.titulo }} </b></h5>
+          <h5><b> {{ secoes.titulo }} [ {{ secoes.codigo }} ]</b></h5>
           <p> {{ secoes.data }} </p>
           <div class="line"></div>
           <p class="card-text"> {{ secoes.descricao }} </p>

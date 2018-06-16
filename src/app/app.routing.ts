@@ -10,6 +10,7 @@ import { PageApresentacaoComponent } from './page-apresentacao/page-apresentacao
 import { PageInicialComponent } from './page-inicial/page-inicial.component';
 
 import { SecoesComponent } from './secoes/secoes.component';
+import { DetalhesSecoesComponent } from './secoes/detalhes-secoes/detalhes-secoes.component';
 
 
 const APP_ROUTES: Routes = [
@@ -19,7 +20,9 @@ const APP_ROUTES: Routes = [
         {path: 'cadastrar', component: CadastrarComponent}
     ]},
     {path: 'pagina-inicial', component: PageInicialComponent, children:[
-        {path: 'secoes', component: SecoesComponent},
+        {path: 'secoes', component: SecoesComponent, children:[
+            {path: 'detalhe', component: DetalhesSecoesComponent}
+        ]},
         {path: 'criarsecao', component: PageCriarSecaoComponent, children: [
             {path: 'gerarcodigo', component: GerarCodigoComponent},
             {path: 'addDicas', component: AddDicasComponent},

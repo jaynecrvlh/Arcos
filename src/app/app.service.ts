@@ -98,5 +98,10 @@ export class AppService {
     // });
   }
 
+  getSecao(id){
+    return this.http.get(this.urls + "/sessoes/" + id + "?token=" + this.getToken())
+    .map((response:Response)=>(response.json()));
+  }
+
 }
 

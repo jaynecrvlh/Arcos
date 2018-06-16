@@ -31,6 +31,7 @@
 
 ::-webkit-input-placeholder {
     color: white;
+    font-size: 10pt;
  }
 
 .input{
@@ -91,7 +92,7 @@ img{
 }
 
 .ng-invalid.ng-touched:not(form){
-    border: 1px solid red;
+    border-bottom: 1px solid red;
 }
 
 .comp{

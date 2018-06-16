@@ -1,5 +1,7 @@
 .secoes{
     margin: 30px 40px 0 100px;
-    width: 1190px;
+    width: 1200px;
+    height: 530;
+    overflow: auto;
     /* background-color: red; */
 }
