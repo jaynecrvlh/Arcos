@@ -1,125 +1,144 @@
 <div class="add-dicas">
   <div class="row">
     <div class="col-sm-6">
+      <form #secao2="ngForm">
         <div class="titulo">
-          <h5><b>2º Adicione dicas as suas respectivas casas:</b></h5>
+          <h5>
+            <b>2º Adicione dicas as suas respectivas casas:</b>
+          </h5>
         </div>
-      <div class="row row-dica dica1">
-        <div class="col-sm dica">
+        <div *ngIf="(!scasa1.valid && scasa1.touched) || (!scasa8.valid && scasa8.touched) || (!scasa2.valid && scasa2.touched) || (!scasa10.valid && scasa10.touched) || (!scasa4.valid && scasa4.touched) || (!scasa11.valid && scasa11.touched) || (!scasa5.valid && scasa5.touched) || (!scasa13.valid && scasa13.touched) || (!scasa7.valid && scasa7.touched) || (!scasa14.valid && scasa14.touched)" class="campo-vazio"> Coloque todas as dicas! </div>
+        <!-- <div *ngIf="(!scasa1.valid && scasa1.touched) || (!scasa8.valid && scasa8.touched) || (!scasa2.valid && scasa2.touched) || (!casa10.valid && casa10.touched) || (!casa4.valid && casa4.touched) || (!scasa11.valid && scasa11.touched) || (!scasa5.valid && scasa5.touched) || (!scasa13.valid && scasa13.touched) || (!scasa7.valid && scasa7.touched) || (!scasa14.valid && scasa14.touched)" class="campo-vazio"> As alternativas são obrigatórias! </div> -->
+        <div class="row row-dica dica1">
+          <div class="col-sm dica">
             <div class="num-dica">
               <h4>01</h4>
             </div>
             <input type="text" class="form-control input" [(ngModel)]="casa1" name="casa1" required #scasa1="ngModel">
+          </div>
+          <div class="col-sm dica">
+            <div class="num-dica">
+              <h4>08</h4>
+            </div>
+            <input type="text" class="form-control input" [(ngModel)]="casa8" name="casa8" required #scasa8="ngModel">
+          </div>
         </div>
-        <div class="col-sm dica">
-           <div class="num-dica">
-             <h4>08</h4>
-           </div>
-           <input type="text" class="form-control input" [(ngModel)]="casa8" name="casa8" required #scasa8="ngModel">
-        </div>
-      </div>
-      <div class="row row-dica">
-        <div class="col-sm dica">
+        <div class="row row-dica">
+          <div class="col-sm dica">
             <div class="num-dica">
               <h4>02</h4>
             </div>
             <input type="text" class="form-control input" [(ngModel)]="casa2" name="casa2" required #scasa2="ngModel">
-        </div>
-        <div class="col-sm dica">
+          </div>
+          <div class="col-sm dica">
             <div class="num-dica">
               <h4>10</h4>
             </div>
             <input type="text" class="form-control input" [(ngModel)]="casa10" name="casa10" required #scasa10="ngModel">
+          </div>
         </div>
-      </div>
-      <div class="row row-dica">
-        <div class="col-sm dica">
+        <div class="row row-dica">
+          <div class="col-sm dica">
             <div class="num-dica">
               <h4>04</h4>
             </div>
             <input type="text" class="form-control input" [(ngModel)]="casa4" name="casa4" required #scasa4="ngModel">
-        </div>
-        <div class="col-sm dica">
+          </div>
+          <div class="col-sm dica">
             <div class="num-dica">
               <h4>11</h4>
             </div>
             <input type="text" class="form-control input" [(ngModel)]="casa11" name="casa11" required #scasa11="ngModel">
+          </div>
         </div>
-      </div>
-      <div class="row row-dica">
-        <div class="col-sm dica">
+        <div class="row row-dica">
+          <div class="col-sm dica">
             <div class="num-dica">
               <h4>05</h4>
             </div>
             <input type="text" class="form-control input" [(ngModel)]="casa5" name="casa5" required #scasa5="ngModel">
-        </div>
-        <div class="col-sm dica">
+          </div>
+          <div class="col-sm dica">
             <div class="num-dica">
               <h4>13</h4>
             </div>
             <input type="text" class="form-control input" [(ngModel)]="casa13" name="casa13" required #scasa13="ngModel">
+          </div>
         </div>
-      </div>
-      <div class="row row-dica">
-        <div class="col-sm dica">
+        <div class="row row-dica">
+          <div class="col-sm dica">
             <div class="num-dica">
               <h4>07</h4>
             </div>
             <input type="text" class="form-control input" [(ngModel)]="casa7" name="casa7" required #scasa7="ngModel">
-        </div>
-        <div class="col-sm dica">
+          </div>
+          <div class="col-sm dica">
             <div class="num-dica">
               <h4>14</h4>
             </div>
             <input type="text" class="form-control input" [(ngModel)]="casa14" name="casa14" required #scasa14="ngModel">
+          </div>
         </div>
-      </div>
+      </form>
     </div>
     <div class="col-sm-5">
-      <p class="instrucao">Adicione as dicas que serão mostradas no decorrer do jogo. As dicas deverão indicar ao aluno qual assunto está sendo abordado nesta seção.
-        </p>
+      <p class="instrucao">Adicione as dicas que serão mostradas no decorrer do jogo. As dicas deverão indicar ao aluno qual assunto está sendo
+        abordado nesta seção.
+      </p>
       <div class="tabueiro-dica">
         <div class="tabu">
-            <div class="coluna-lateral" >
-                <div class="casa cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')"><img src="../../../assets/images/lock.png"></div>
-                <div class="casa" (click)="clicou('Seja direto(a)')">13</div>
-                <div class="casa casa-lateral" (click)="clicou('Cuidado para não entregar o jogo')">14</div>
-                <div class="casa casa-lateral cadeado"(click)="clicou('Esta casa é fixa e não pode receber uma dica')"><img src="../../../assets/images/lock.png"></div>
-                <div class="casa casa-lateral inicio"></div>
+          <div class="coluna-lateral">
+            <div class="casa cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')">
+              <img src="../../../assets/images/lock.png">
+            </div>
+            <div class="casa" (click)="clicou('Seja direto(a)')">13</div>
+            <div class="casa casa-lateral" (click)="clicou('Cuidado para não entregar o jogo')">14</div>
+            <div class="casa casa-lateral cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')">
+              <img src="../../../assets/images/lock.png">
+            </div>
+            <div class="casa casa-lateral inicio"></div>
+          </div>
+          <div class="coluna-central">
+            <div class="coluna-central__superior-inferior" id="superior">
+              <div class="casa" (click)="clicou('Utilize as casas finais para as dicas mais fáceis')">11</div>
+              <div class="casa" (click)="clicou('Dê dicas que incentivem a discussão')">10</div>
+              <div class="casa cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')">
+                <img src="../../../assets/images/lock.png">
               </div>
-              <div class="coluna-central">
-                <div class="coluna-central__superior-inferior" id="superior">
-                  <div class="casa" (click)="clicou('Utilize as casas finais para as dicas mais fáceis')">11</div>
-                  <div class="casa" (click)="clicou('Dê dicas que incentivem a discussão')">10</div>
-                  <div class="casa cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')"><img src="../../../assets/images/lock.png"></div>
-                </div>
-                <div class="coluna-central__central">
-                  <p class="texto-dinamico"><b>{{texto}}</b></p>
-                </div>
-                <div class="coluna-central__superior-inferior">
-                  <div class="casa" (click)="clicou('Ordene das dicas mais difíceis até as mais fáceis')">01</div>
-                  <div class="casa" (click)="clicou('Utilize as primeiras casas para as dicas mais difíceis')">02</div>
-                  <div class="casa cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')"><img src="../../../assets/images/lock.png"></div>
-                </div>
-        
+            </div>
+            <div class="coluna-central__central">
+              <p class="texto-dinamico">
+                <b>{{texto}}</b>
+              </p>
+            </div>
+            <div class="coluna-central__superior-inferior">
+              <div class="casa" (click)="clicou('Ordene das dicas mais difíceis até as mais fáceis')">01</div>
+              <div class="casa" (click)="clicou('Utilize as primeiras casas para as dicas mais difíceis')">02</div>
+              <div class="casa cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')">
+                <img src="../../../assets/images/lock.png">
               </div>
-              <div class="coluna-lateral">
-                  <div class="casa casa-lateral" (click)="clicou('Dê dicas curtas')">08</div>
-                  <div class="casa casa-lateral" (click)="clicou('Cuidado para não tornar o jogo difícil demais')" >07</div>
-                  <div class="casa casa-lateral cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')"><img src="../../../assets/images/lock.png"></div>
-                  <div class="casa casa-lateral" (click)="clicou('Não utilize fatos que seus alunos não tenham sido apresentados')">05</div>
-                  <div class="casa"(click)="clicou('Confunda seus alunos, faça-os ter que juntar as peças')">04</div>
-              </div>
+            </div>
+
+          </div>
+          <div class="coluna-lateral">
+            <div class="casa casa-lateral" (click)="clicou('Dê dicas curtas')">08</div>
+            <div class="casa casa-lateral" (click)="clicou('Cuidado para não tornar o jogo difícil demais')">07</div>
+            <div class="casa casa-lateral cadeado" (click)="clicou('Esta casa é fixa e não pode receber uma dica')">
+              <img src="../../../assets/images/lock.png">
+            </div>
+            <div class="casa casa-lateral" (click)="clicou('Não utilize fatos que seus alunos não tenham sido apresentados')">05</div>
+            <div class="casa" (click)="clicou('Confunda seus alunos, faça-os ter que juntar as peças')">04</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="botoes">
+  <div class="botoes" >
     <div class="voltar">
-      <app-botao  [routerLink] = "['/pagina-inicial','criarsecao','addPergunta']"> Voltar </app-botao>
+      <app-botao [routerLink]="['/pagina-inicial','criarsecao','addPergunta']"> Voltar </app-botao>
     </div>
-    <div >
+    <div *ngIf="secao2.valid">
       <app-botao class="avancar" (click)="criarSecao3($event)"> Avançar </app-botao>
     </div>
   </div>

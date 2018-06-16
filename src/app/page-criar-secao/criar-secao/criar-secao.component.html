@@ -4,12 +4,19 @@
             <div class="form">
                 <form #secao1="ngForm">
                     <h5><b>Nome da seção:</b></h5>
-                    <input type="text" placeholder="exemplo: Rachel de Queiroz" class="input form-control" [(ngModel)]="titulo" name="titulo" required #stitulo="ngModel"><br/>
+                    <input type="text" placeholder="exemplo: Rachel de Queiroz" class="input form-control" [(ngModel)]="titulo" name="titulo" required #stitulo="ngModel">
+                    <div *ngIf="!stitulo.valid && stitulo.touched" class="campo-vazio"> O nome da seção é obrigatório! </div><br/>
                     <h5><b>Descrição da seção:</b></h5>
                     <input type="text" placeholder="exemplo: Esta seção retrada a vida e memoria da escritora Rachel de Queiroz" class="input form-control" [(ngModel)]="descricao" name="descricao" required #sdescricao="ngModel">
+                    <div *ngIf="!sdescricao.valid && sdescricao.touched" class="campo-vazio"> A descrição é obrigatória! </div>
                     <div class="respostas">
                         <h5><b>Respostas:</b></h5>
                         <p class="subtitle">* selecione para indicar a resposta correta</p>
+                        <div *ngIf="(!salternativa1.valid && salternativa1.touched) || (!salternativa2.valid && salternativa2.touched) || (!salternativa3.valid && salternativa3.touched) || (!salternativa4.valid && salternativa4.touched)" class="campo-vazio"> As alternativas são obrigatórias! </div>
+                        <div [ngClass]="{'naocomp': nulo}" class="campo-vazio comp"> Marque a alternativa correta! </div>
+                        <!-- <div *ngIf="!salternativa2.valid && salternativa2.touched" class="campo-vazio"> As alternativas são obrigatórias! </div> -->
+                        <!-- <div *ngIf="!salternativa3.valid && salternativa3.touched" class="campo-vazio"> As alternativas são obrigatórias! </div>
+                        <div *ngIf="!salternativa4.valid && salternativa4.touched" class="campo-vazio"> As alternativas são obrigatórias! </div> -->
                         <div class="alternativa">
                             <div class="num-alternativa">
                                 <input class="radios" type="radio" name="check1" class="check" [(ngModel)]="opcao" value="0">
@@ -51,8 +58,8 @@
                 <img src="../../../assets/images/Group 35.png">
             </div>
         </div>
-        <div class="botoes">
-            <app-botao class="avancar" (click)="criarSecao1($event)" [routerLink] = "['/pagina-inicial','criarsecao','addDicas']"> Avançar </app-botao>
+        <div class="botoes" *ngIf="secao1.valid">
+            <app-botao class="avancar" (click)="criarSecao1($event)"> Avançar </app-botao>
         </div>  
     </div>
 </div>

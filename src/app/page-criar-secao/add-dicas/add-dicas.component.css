@@ -130,3 +130,17 @@
     width: 1070px;
     /* background: red; */
 }
+
+.ng-invalid.ng-touched:not(form){
+    border: 1px solid red;
+}
+
+.comp{
+    display: none;
+}
+.naocomp{
+    display: block;
+}
+.campo-vazio{
+    color: red;
+}

@@ -13,6 +13,7 @@ export class GerarCodigoComponent implements OnInit {
   palpite: Array<string> = [];
   opcao: number;
   dicas: Array<string> = [];
+  codigo: number;
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router, private servico : AppService) {
     this.activatedRoute.queryParams.subscribe(params => {
@@ -33,8 +34,15 @@ export class GerarCodigoComponent implements OnInit {
     this.servico.criarSecao(this.titulo, this.descricao, this.dicas, this.palpite, this.opcao)
     .subscribe((data) => {
       console.log(data);
+      this.setCodigo(data);
     },
       (error) => console.log(error))  
   }
 
+  setCodigo(data){
+    this.codigo = data.codigo;
+  }
+
 }
+
+

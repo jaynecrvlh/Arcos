@@ -19,16 +19,21 @@ export class CriarSecaoComponent implements OnInit {
   alternativa3: string;
   alternativa4: string;
   opcao: number;
+  nulo: boolean = false;
 
   constructor(private addDicas: AddDicasComponent, private router: Router) { }
 
   criarSecao1(e){
-    event.preventDefault();
-    this.palpite.push(this.alternativa1);
-    this.palpite.push(this.alternativa2);
-    this.palpite.push(this.alternativa3);
-    this.palpite.push(this.alternativa4);
-    this.router.navigate(['/pagina-inicial','criarsecao','addDicas'], { queryParams: { titulo:this.titulo, descricao: this.descricao, palpite: this.palpite, opcao: this.opcao}});
+    if(this.opcao == null){
+      this.nulo = true;
+    }else{
+      event.preventDefault();
+      this.palpite.push(this.alternativa1);
+      this.palpite.push(this.alternativa2);
+      this.palpite.push(this.alternativa3);
+      this.palpite.push(this.alternativa4);
+      this.router.navigate(['/pagina-inicial','criarsecao','addDicas'], { queryParams: { titulo:this.titulo, descricao: this.descricao, palpite: this.palpite, opcao: this.opcao}});
+    }
   }
 
   ngOnInit() {

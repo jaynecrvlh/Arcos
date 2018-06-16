@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Cartao } from '../../modelos/cartao.model';
 import { GerarCodigoComponent } from '../gerar-codigo/gerar-codigo.component';
 import { Router, ActivatedRoute } from '@angular/router';
