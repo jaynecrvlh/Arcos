@@ -14,6 +14,7 @@ export class GerarCodigoComponent implements OnInit {
   opcao: number;
   dicas: Array<string> = [];
   codigo: number;
+  sucesso: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router, private servico : AppService) {
     this.activatedRoute.queryParams.subscribe(params => {
@@ -34,7 +35,12 @@ export class GerarCodigoComponent implements OnInit {
     this.servico.criarSecao(this.titulo, this.descricao, this.dicas, this.palpite, this.opcao)
     .subscribe((data) => {
       console.log(data);
+      this.sucesso = true;
       this.setCodigo(data);
+      setTimeout(() => {
+        this.router.navigate(['/pagina-inicial', 'secoes']);
+      }
+      , 4000);
     },
       (error) => console.log(error))  
   }

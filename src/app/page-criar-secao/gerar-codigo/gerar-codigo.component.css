@@ -84,3 +84,12 @@
     /* background-color: red; */
 }
 
+.comp{
+    display: none;
+}
+
+.sucess{
+    display: block;
+    color: white;
+    margin: auto;
+}

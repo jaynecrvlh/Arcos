@@ -14,25 +14,31 @@ export class SecoesComponent implements OnInit {
 
   secoes: any = [];
   index = this.index;
+  vazio: boolean = false;
 
   ngOnInit() {
-  //   this.data = this.service.getSecoes()
+    //   this.data = this.service.getSecoes()
 
-  //   this.secoes.push(new Cartao(this.data.titulo, this.data.data, this.data.decricao, this.data.palpite, this.data.correta, this.data.dicas, this.data.codigo))
-  //   console.log(this.secoes);
-  //   console.log("data: " +this.data)
-  // }
-  this.service.getSecoes()
-          .subscribe(
-            data=>{
-              console.log(data);
-              this.secoes = data;
-              console.log(this.secoes);
-            },
-            error=>{
-              console.log(error);
-            }
-          )
+    //   this.secoes.push(new Cartao(this.data.titulo, this.data.data, this.data.decricao, this.data.palpite, this.data.correta, this.data.dicas, this.data.codigo))
+    //   console.log(this.secoes);
+    //   console.log("data: " +this.data)
+    // }
+    this.service.getSecoes()
+      .subscribe(
+        data => {
+          console.log(data);
+          this.secoes = data;
+          if (this.secoes.length == 0){
+            this.vazio = true;
+            console.log(this.vazio);
+          }else{
+            console.log(this.secoes);
+          }
+        },
+        error => {
+          console.log(error);
         }
+      )
+  }
 
 }

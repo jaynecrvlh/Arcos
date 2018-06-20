@@ -3,7 +3,7 @@
     <img class="logo" src="../../../assets/images/arcos-azul.png">
   </a>
   <div class="user">
-    <p class="user-name"><b> {{ usuario }} </b></p>
-    <a href="" class="sair"> sair</a>
+    <p class="user-name"><b> {{ user.nome }} </b></p>
+    <a href="" class="sair" (click)="logout()"> sair</a>
   </div>
 </nav>

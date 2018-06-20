@@ -1,6 +1,7 @@
 import { AppService } from './../../app.service';
 import { User } from './../../modelos/user.model';
 import { Component, OnInit, Output, EventEmitter, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,8 +18,9 @@ export class CadastrarComponent implements OnInit {
   senha: string;
   cnfsenha: string;
   compatibilidade: boolean = false;
+  sucesso: boolean = false;
 
-  constructor(private servico: AppService) { }
+  constructor(private servico: AppService, private router: Router) { }
 
   ngOnInit() {
 
@@ -36,6 +38,11 @@ export class CadastrarComponent implements OnInit {
       this.servico.cadastrar(this.nome, this.email, this.senha)
         .subscribe((data) => {
           console.log(data);
+          this.sucesso = true;
+          setTimeout(() => {
+            this.router.navigate(['/pagina-apresentacao/entrar'])
+          }
+          , 4000);
         },
           (error) => console.log(error))  
     }

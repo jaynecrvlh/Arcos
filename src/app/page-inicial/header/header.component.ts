@@ -8,7 +8,7 @@ import { AppService } from './../../app.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  
+  user: any;
   usuario: string;
 
   constructor(private servico: AppService) {
@@ -19,6 +19,20 @@ export class HeaderComponent implements OnInit {
   //   this.servico.getUsuarios();
   // }
   ngOnInit() {
+    this.servico.getLogado()
+    .subscribe(
+      data=>{
+        this.user = data;
+        console.log(this.user);
+      },
+      error=>{
+        console.log(error);
+      }
+    )
+  }
+
+  logout(){
+    this.servico.logout();
   }
 
 }

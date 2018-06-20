@@ -41,9 +41,16 @@
 .comp{
     display: none;
 }
+
 .naocomp{
     display: block;
 }
 .campo-vazio{
     color: red;
+}
+
+.sucess{
+    display: block;
+    color: green;
+    margin: auto;
 }

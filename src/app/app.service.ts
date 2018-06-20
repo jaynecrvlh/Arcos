@@ -103,5 +103,15 @@ export class AppService {
     .map((response:Response)=>(response.json()));
   }
 
+  getLogado(){
+    return this.http.get(this.urlp + "/logado" + "?token=" + this.getToken())
+      .map((response:Response)=>(response.json()));
+  }
+
+  logout(){
+    localStorage.setItem("token", null);
+    localStorage.setItem("_id", null);
+  }
+
 }
 

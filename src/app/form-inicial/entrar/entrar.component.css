@@ -24,3 +24,16 @@
 .esqueceu-senha{
     font-size: 10pt;
 }
+
+.comp{
+    display: none;
+}
+
+.campo-vazio{
+    color: red;
+}
+
+.erro{
+    display: block;
+    margin: auto;
+}

@@ -13,6 +13,7 @@ export class EntrarComponent implements OnInit {
 
   emailLogin: string;
   senhaLogin: string;
+  erro: boolean = false;
   
   constructor( private servico: AppService, private router: Router) { }
 
@@ -29,7 +30,7 @@ export class EntrarComponent implements OnInit {
     .subscribe((data) => {
       console.log(data);
     },
-      (error) => console.log(error));
-
+      (error) => this.erro = true);
+      // console.log(error)
   }
 }
