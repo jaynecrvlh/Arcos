@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 
 @Injectable()
 export class AppService {
-  urls = "http://localhost:3000/api/sessao";
-  urlp = "http://localhost:3000/api/professores";
+  urls = "/api/sessao";
+  urlp = "/api/professores";
   username: string;
 
   constructor(private http: Http , private router: Router) { }

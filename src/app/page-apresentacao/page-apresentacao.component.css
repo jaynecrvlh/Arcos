@@ -10,14 +10,14 @@
 }
 
 .logo{
-    padding: 40px 0 30px 70px;
-    width: 160px;
+    padding: 40px 0 20px 70px;
+    width: 130px;
 }
 
 .conteudo{
     margin-left: 70px;
     /* background-color: red; */
-    width: 530px;
+    width: 580px;
     height: 450px;
     color: white;
     line-height: 1.3;

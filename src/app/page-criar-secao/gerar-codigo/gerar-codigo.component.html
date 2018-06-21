@@ -13,13 +13,14 @@
       </p>  
 
     </div>
-    <div class="col-sm-6 coluna2">
+    <div class="col-sm-6 container">
       <div class="codigo-container">
-        <p class="codigo"> {{ codigo }} </p>
-      </div>
-      <div [ngClass]="{'sucess': sucesso}" class="comp"><b>Cadastro realizado com sucesso!</b></div>
-    </div>
-    
+          <div>
+              <p class="codigo"> {{ codigo }} </p>      
+          </div>
+        </div> 
+        <div [ngClass]="{'sucess': sucesso}" class="comp coluna2"><b>Cadastro realizado com sucesso!</b></div>      
+    </div>    
   </div>
   <div class="botoes">
     <div class="voltar">

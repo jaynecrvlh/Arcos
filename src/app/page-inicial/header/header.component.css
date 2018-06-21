@@ -11,12 +11,16 @@
     margin: 10px 15px 0 0;
 }
 .logo{
-    width: 90px;
+    width: 50px;
     margin:10px 0 0 30px;
 }
 
 .header{
     /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+.user{
     display: flex;
     align-items: center;
 }

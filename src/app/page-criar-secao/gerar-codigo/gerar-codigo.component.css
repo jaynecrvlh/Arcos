@@ -41,7 +41,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 5px;
+    /* background-color: red; */
 }
+
+.container{
+    /* margin: auto; */
+    margin-top: 160px;
+}
+
 .codigo-container{
     width: 20vw;
     height: 12vh;
@@ -91,5 +99,4 @@
 .sucess{
     display: block;
     color: white;
-    margin: auto;
 }
