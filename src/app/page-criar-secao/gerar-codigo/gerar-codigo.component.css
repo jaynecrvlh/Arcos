@@ -93,10 +93,11 @@
 }
 
 .comp{
-    display: none;
+    color: transparent;
+    user-select: none;
 }
 
 .sucess{
-    display: block;
+    /* display: block; */
     color: white;
 }

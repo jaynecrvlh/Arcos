@@ -1,6 +1,7 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../app.service';
+import { NavbarComponent } from './../../page-inicial/navbar/navbar.component';
 
 @Component({
   selector: 'app-gerar-codigo',
@@ -16,7 +17,7 @@ export class GerarCodigoComponent implements OnInit {
   codigo: number;
   sucesso: boolean = false;
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router, private servico : AppService) {
+  constructor(private activatedRoute: ActivatedRoute, private router: Router, private servico : AppService, private navbar: NavbarComponent) {
     this.activatedRoute.queryParams.subscribe(params => {
           this.titulo = params['titulo'];
           this.descricao =  params['descricao']; 
@@ -31,7 +32,6 @@ export class GerarCodigoComponent implements OnInit {
 
 
   criarSecao6(){
-    console.log("chegou na putaria do gerar");
     this.servico.criarSecao(this.titulo, this.descricao, this.dicas, this.palpite, this.opcao)
     .subscribe((data) => {
       console.log(data);
@@ -39,6 +39,7 @@ export class GerarCodigoComponent implements OnInit {
       this.setCodigo(data);
       setTimeout(() => {
         this.router.navigate(['/pagina-inicial', 'secoes']);
+        this.navbar.ativarSecao();
       }
       , 4000);
     },

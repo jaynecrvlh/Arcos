@@ -27,8 +27,6 @@ import { PageCriarSecaoComponent } from './page-criar-secao/page-criar-secao.com
 import { CriarSecaoComponent } from './page-criar-secao/criar-secao/criar-secao.component';
 import { DetalhesSecoesComponent } from './secoes/detalhes-secoes/detalhes-secoes.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +54,7 @@ import { DetalhesSecoesComponent } from './secoes/detalhes-secoes/detalhes-secoe
     HttpModule,
     routing,
     ],
-  providers: [AppService, AddDicasComponent, GerarCodigoComponent],
+  providers: [AppService, AddDicasComponent, GerarCodigoComponent, NavbarComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

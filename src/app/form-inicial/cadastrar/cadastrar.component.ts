@@ -1,3 +1,4 @@
+import { FormInicialComponent } from './../form-inicial.component';
 import { AppService } from './../../app.service';
 import { User } from './../../modelos/user.model';
 import { Component, OnInit, Output, EventEmitter, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -20,7 +21,7 @@ export class CadastrarComponent implements OnInit {
   compatibilidade: boolean = false;
   sucesso: boolean = false;
 
-  constructor(private servico: AppService, private router: Router) { }
+  constructor(private servico: AppService, private router: Router, private entrar: FormInicialComponent) { }
 
   ngOnInit() {
 
@@ -40,7 +41,8 @@ export class CadastrarComponent implements OnInit {
           console.log(data);
           this.sucesso = true;
           setTimeout(() => {
-            this.router.navigate(['/pagina-apresentacao/entrar'])
+            this.router.navigate(['/pagina-apresentacao/entrar']);
+            this.entrar.ativarEntrar();
           }
           , 4000);
         },
